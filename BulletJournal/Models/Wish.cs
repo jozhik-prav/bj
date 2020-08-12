@@ -13,7 +13,7 @@ namespace BulletJournal
         /// <summary>
         /// Идентификатор желания
         /// </summary>
-        public Guid Id = new Guid();
+        public Guid Id {get; set; } = Guid.NewGuid();
 
         /// <summary>
         /// Навзание желания
@@ -43,6 +43,6 @@ namespace BulletJournal
         /// <summary>
         /// Исполнено ли желание
         /// </summary>
-        public bool IsComlete { get; set; }
+        public bool IsComplete { get; set; }
     }
 }

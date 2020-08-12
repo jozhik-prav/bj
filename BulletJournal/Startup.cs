@@ -30,7 +30,7 @@ namespace BulletJournal
             string con = "Server=(localdb)\\mssqllocaldb;Database=todobd;Trusted_Connection=True;";
             // устанавливаем контекст данных
             services.AddDbContext<BulletJournalContext>(options => options.UseSqlServer(con));
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp";
